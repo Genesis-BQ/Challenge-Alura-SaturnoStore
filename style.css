@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(110deg, #d3cfcf 50%, #ea9800 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+ 
+header {
+    background-color: #ea9800;
+    color: #0f0f0f;
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+ 
+footer{
+    background-color: #ea9800;
+    color: #0e0d0d;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 25%;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+.small-image {
+    width: 70px;
+    height: 70px;
+}
+
+.cabecera--titulo{
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer--titulo{
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-form, .product-list {
+    background-color: #d89f23a4;
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ 
+.product-list #products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+ 
+.product-card {
+    background-color: #ea9800;
+    border: 1px solid #141313;
+    border-radius: 17px;
+    padding: 1em;
+    width: 150px;
+    text-align: center;
+    position: relative;
+}
+ 
+.product-card img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+ 
+.product-card button {
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+ 
+.product-card button:hover {
+    background-color: #c62828;
+}
+
+.Botones{
+    background-color: #e78a0f;
+    color: #0a0808;
+    border: none;
+    border-radius: 4px;
+    padding: 1em;
+    width: 150px;
+    font-size: 13px;
+    text-align: center;
+    align-items: center;
+}
+.txtbox{
+    border: none;
+    border-radius: 4px;
+    padding: 0.7em;
+    width: 150px;
+}
+/* Contenedor de botones */
+.button-container {
+    display: flex;             /* Flexbox para alinear botones horizontalmente */
+    gap: 10px;                 /* Espacio entre los botones */
+    justify-content: center;   /* Centra los botones horizontalmente */
+    align-items: center;       /* Alinea los botones verticalmente */
+}
+
+/* Estilos comunes para los botones */
+.button,
+.button-reset {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para el SVG */
+.svgIcon {
+    width: 12px;
+    transition-duration: .3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+/* Hover efectos para el botón submit */
+.button:hover {
+    width: 140px;
+    border-radius: 50px;
+    background-color: rgb(181, 160, 255);
+}
+
+.button:hover .svgIcon {
+    transform: translateY(-200%);
+}
+
+.button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Enviar";
+    font-size: 0px;
+    font-weight: bold;
+    transition-duration: .3s;
+}
+
+.button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+}
+
+/* Hover efectos para el botón reset */
+.button-reset:hover {
+    width: 140px;
+    border-radius: 50px;
+    background-color: rgb(255, 69, 69);
+}
+
+.button-reset .svgIcon {
+    transform: translateY(60%);
+}
+
+.button-reset::before {
+    position: absolute;
+    top: -20px;
+    content: "Limpiar Texto";
+    font-size: 2px;
+    font-weight: bold;
+    transition-duration: .3s;
+}
+
+.button-reset:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+}
+@media (max-width: 768px) {
+    
+    .main {
+      flex-direction: row; 
+      justify-content: center; 
+    }
+  
+    .product-card {
+        width: 30%; 
+        padding: 2vw; 
+    }
+    .button,
+    .button-reset {
+    width: 8vw; 
+    height: 8vw; 
+    }
+    .product-list #products-container {
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+    }
+    .footer--titulo{
+        font-size: 0.8em; 
+        margin-top: 35%;
+        font-weight: 400;
+    }
+  }
